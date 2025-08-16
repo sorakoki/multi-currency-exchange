@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>多货币汇率转换工具</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+font-family: Arial, sans-serif;
+background: #f5f5f5;
+text-align: center;
+padding: 20px;
+}
+h1 {
+color: #333;
+font-size: 1.4rem;
+}
+.container {
+background: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+display: inline-block;
+max-width: 320px;
+width: 100%;
+}
+select, input, button {
+padding: 10px;
+margin: 6px 0;
+font-size: 1rem;
+width: 100%;
+box-sizing: border-box;
+}
+button {
+background-color: #4CAF50;
+border: none;
+color: white;
+border-radius: 4px;
+}
+button:hover {
+background-color: #45a049;
+}
+#errorArea {
+color: red;
+margin-top: 10px;
+min-height: 18px;
+}
+</style>
+</head>
+<body>
+<h1>多货币汇率转换工具</h1>
+<div class="container">
+<label>金额</label>
+<input id="amountInput" type="number" placeholder="请输入金额">
+<label>原货币</label>
+<select id="fromCurrency">
+<option value="USD" selected>USD</option>
+<option value="JPY">JPY</option>
+<option value="EUR">EUR</option>
+<option value="GBP">GBP</option>
+<option value="AUD">AUD</option>
+<option value="CAD">CAD</option>
+</select>
+<label>目标货币</label>
+<select id="toCurrency">
+<option value="JPY" selected>JPY</option>
+<option value="USD">USD</option>
+<option value="EUR">EUR</option>
+<option value="GBP">GBP</option>
+<option value="AUD">AUD</option>
+<option value="CAD">CAD</option>
+</select>
+<button id="fetchRateBtn">使用最新汇率转换</button>
+<div id="resultArea" style="margin-top:10px; font-weight:bold;"></div>
+<div id="errorArea"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
